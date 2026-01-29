@@ -1,0 +1,760 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.9)), url('https://cdn.pixabay.com/photo/2016/11/14/03/16/school-1822480_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.profil-hero {
+    background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.9)), url('https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.kontak-hero {
+    background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.9)), url('https://cdn.pixabay.com/photo/2019/07/25/18/58/contact-us-4362937_1280.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e55a00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Main Content */
+main {
+    padding: 60px 0;
+}
+
+.section {
+    margin-bottom: 70px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff6600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Berita Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #004080;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.news-date .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.news-date .month, .news-date .year {
+    font-size: 0.8rem;
+    display: block;
+}
+
+.news-card h3 {
+    padding: 60px 20px 15px;
+    color: #004080;
+}
+
+.news-card p {
+    padding: 0 20px 20px;
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 20px 20px;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #004080;
+}
+
+/* Jurusan Grid */
+.jurusan-grid, .fasilitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.jurusan-card, .fasilitas-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.jurusan-card:hover, .fasilitas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.jurusan-card i, .fasilitas-card i {
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.jurusan-card h3, .fasilitas-card h3 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.jurusan-card p, .fasilitas-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #004080;
+    border-radius: 10px;
+    color: white;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-box i {
+    font-size: 2rem;
+    color: #ff6600;
+}
+
+.info-box h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    opacity: 0.9;
+}
+
+/* Visi Misi */
+.visi-misi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.visi, .misi {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.visi h3, .misi h3 {
+    color: #004080;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.visi p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.misi ol {
+    padding-left: 20px;
+}
+
+.misi li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Sejarah */
+.sejarah {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.sejarah-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sejarah-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Struktur Organisasi */
+.struktur {
+    margin-top: 30px;
+}
+
+.kepala-sekolah {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.struktur-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #004080;
+}
+
+.struktur-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.struktur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.struktur-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.struktur-card h4 {
+    color: #004080;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6600;
+}
+
+.struktur-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Kontak Container */
+.kontak-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.kontak-info h2, .kontak-form h2 {
+    color: #004080;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-top: 5px;
+}
+
+.info-item h3 {
+    color: #004080;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.social-kontak {
+    margin-top: 40px;
+}
+
+.social-kontak h3 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-btn i {
+    margin-right: 8px;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.instagram {
+    background-color: #e4405f;
+}
+
+.social-btn.twitter {
+    background-color: #1da1f2;
+}
+
+.social-btn.youtube {
+    background-color: #cd201f;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+/* Form Kontak */
+.kontak-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #004080;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #004080;
+}
+
+/* Peta Lokasi */
+.peta-lokasi {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+.faq-container {
+    margin-top: 30px;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f5f5f5;
+}
+
+.faq-question h3 {
+    color: #004080;
+    font-size: 1.1rem;
+}
+
+.faq-question i {
+    color: #004080;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 20px 20px;
+    max-height: 500px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* Footer */
+footer {
+    background-color: #00264d;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    color: #ff6600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ff6600;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #004080;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+    
+    nav ul.active {
+        transform: translateY(0);
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav a {
+        padding: 15px;
+        justify-content: center;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .info-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-btn {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

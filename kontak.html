@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 11 Bandung - Kontak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://cdn.pixabay.com/photo/2017/01/31/14/32/school-2026101_1280.png" alt="Logo SMKN 11 Bandung">
+                <div>
+                    <h1>SMKN 11 BANDUNG</h1>
+                    <p>Sekolah Menengah Kejuruan Negeri 11 Bandung</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="profil.html"><i class="fas fa-school"></i> Profil</a></li>
+                    <li><a href="kontak.html" class="active"><i class="fas fa-address-book"></i> Kontak</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero kontak-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Hubungi Kami</h2>
+                <p>Kami siap membantu dan menjawab pertanyaan Anda tentang SMKN 11 Bandung</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="container">
+        <!-- Kontak & Form -->
+        <section class="section">
+            <div class="kontak-container">
+                <div class="kontak-info">
+                    <h2><i class="fas fa-map-marker-alt"></i> Informasi Kontak</h2>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Alamat</h3>
+                            <p>Jl. Budhi Cilember No.17, Ciumbuleuit, Kec. Cidadap, Kota Bandung, Jawa Barat 40142</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>(022) 1234567</p>
+                            <p>(022) 7654321 (Fax)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@smkn11bandung.sch.id</p>
+                            <p>humas@smkn11bandung.sch.id</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Jumat: 07:00 - 16:00 WIB</p>
+                            <p>Sabtu: 08:00 - 13:00 WIB</p>
+                            <p>Minggu & Hari Libur: Tutup</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-kontak">
+                        <h3>Media Sosial</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="#" class="social-btn youtube"><i class="fab fa-youtube"></i> YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kontak-form">
+                    <h2><i class="fas fa-paper-plane"></i> Kirim Pesan</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telepon">Nomor Telepon</label>
+                            <input type="tel" id="telepon" name="telepon">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subjek">Subjek</label>
+                            <select id="subjek" name="subjek" required>
+                                <option value="" selected disabled>Pilih subjek</option>
+                                <option value="informasi">Informasi Pendaftaran</option>
+                                <option value="kerja-sama">Kerja Sama Industri</option>
+                                <option value="keluhan">Keluhan/Saran</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peta Lokasi -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-map"></i> Lokasi Sekolah</h2>
+            <div class="peta-lokasi">
+                <!-- Peta menggunakan iframe dari Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.907229999166!2d107.60880297472267!3d-6.897773667526845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64a7c36b52f%3A0x373b60d4f2e57f8f!2sSMKN%2011%20Bandung!5e0!3m2!1sid!2sid!4v1687841234567!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara mendaftar ke SMKN 11 Bandung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pendaftaran dapat dilakukan melalui jalur PPDB online yang disediakan oleh Dinas Pendidikan Provinsi Jawa Barat. Informasi lebih lanjut dapat dilihat di halaman beranda kami atau langsung menghubungi bagian administrasi sekolah.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa biaya pendidikan di SMKN 11 Bandung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SMKN 11 Bandung merupakan sekolah negeri yang digratiskan. Tidak ada biaya SPP bagi siswa. Hanya ada beberapa biaya operasional yang bersifat sukarela dan disesuaikan dengan kemampuan orang tua siswa.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah SMKN 11 Bandung memiliki asrama?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Saat ini SMKN 11 Bandung belum menyediakan asrama untuk siswa. Namun sekolah bekerja sama dengan beberapa kos-kosan di sekitar sekolah yang bisa menjadi pilihan bagi siswa yang berasal dari luar kota.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana prospek kerja lulusan SMKN 11 Bandung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lulusan SMKN 11 Bandung memiliki prospek kerja yang sangat baik. Sekolah bekerja sama dengan lebih dari 50 perusahaan mitra yang siap menerima lulusan kami. Selain itu, banyak juga lulusan yang melanjutkan ke perguruan tinggi ternama.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SMKN 11 Bandung</h3>
+                    <p>Jl. Budhi Cilember No.17, Ciumbuleuit, Kec. Cidadap, Kota Bandung, Jawa Barat 40142</p>
+                    <p>Email: info@smkn11bandung.sch.id</p>
+                    <p>Telepon: (022) 1234567</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil Sekolah</a></li>
+                        <li><a href="kontak.html">Kontak Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SMKN 11 Bandung. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
